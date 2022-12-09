@@ -1,5 +1,5 @@
 let button;
-let permission = false;
+let permission = true;// true로 바꿔봄
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
