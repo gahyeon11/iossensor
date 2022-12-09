@@ -1,5 +1,5 @@
 let button;
-let permission = true;// true로 바꿔봄
+let permission = false;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -17,11 +17,10 @@ function setup() {
 function iosAccess() {
   DeviceOrientationEvent.requestPermission()
 .then((response) => {
-if (response == "granted"){
-  ipermission = true;
+if (response === "granted"){
+  permission = true;
                           
-}})
-.catch (console.error);
+}}).catch (console.error);
 }
 
 function draw(){
